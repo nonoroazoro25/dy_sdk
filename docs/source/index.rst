@@ -9,28 +9,27 @@
 .. toctree::
    :maxdepth: 4
 
-   render/index
-   docs/render/first_look.rst
-   docs/render/installation_guide.rst
-   docs/render/SDK_tutorial.md
-   docs/render/api/index.rst
-   docs/render/how to use API interface zh.md
-   docs/render/log/index.rst
-   docs/render/api/rayvision_api/task/check.rst
-   docs/render/sync/index.rst
-   docs/render/maya/index.rst
-   docs/render/clarisse/index.rst
-   docs/render/houdini/index.rst
-   docs/render/utils/index.rst
-   docs/render/exception.rst
-   docs/render/para_configration.rst
-   docs/render/architecture.rst
-   docs/render/settings.md
-   docs/render/demo/index.rst
-   docs/render/questions.rst
-   docs/render/error_status.rst
-   docs/render/release_notes.rst
-   docs/render/contributing_to_sdk.rst
+   /render/first_look.rst
+   /render/installation_guide.rst
+   /render/SDK_tutorial.md
+   /render/api/index.rst
+   /render/how to use API interface zh.md
+   /render/log/index.rst
+   /render/api/rayvision_api/task/check.rst
+   /render/sync/index.rst
+   /render/maya/index.rst
+   /render/clarisse/index.rst
+   /render/houdini/index.rst
+   /render/utils/index.rst
+   /render/exception.rst
+   /render/para_configration.rst
+   /render/architecture.rst
+   /render/settings.md
+   /render/demo/index.rst
+   /render/questions.rst
+   /render/error_status.rst
+   /render/release_notes.rst
+   /render/contributing_to_sdk.rst
 
 
 
