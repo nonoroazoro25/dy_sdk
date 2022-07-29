@@ -9,28 +9,27 @@
 .. toctree::
    :maxdepth: 4
 
-   first_look
-   .render/first_look.rst
-   .render/installation_guide.rst
-   .render/SDK_tutorial.md
-   .render/api/index.rst
-   .render/how to use API interface zh.md
-   .render/log/index.rst
-   .render/api/rayvision_api/task/check.rst
-   .render/sync/index.rst
-   .render/maya/index.rst
-   .render/clarisse/index.rst
-   .render/houdini/index.rst
-   .render/utils/index.rst
-   .render/exception.rst
-   .render/para_configration.rst
-   .render/architecture.rst
-   .render/settings.md
-   .render/demo/index.rst
-   .render/questions.rst
-   .render/error_status.rst
-   .render/release_notes.rst
-   .render/contributing_to_sdk.rst
+   render/first_look.rst
+   render/installation_guide.rst
+   render/SDK_tutorial.md
+   render/api/index.rst
+   render/how to use API interface zh.md
+   render/log/index.rst
+   render/api/rayvision_api/task/check.rst
+   render/sync/index.rst
+   render/maya/index.rst
+   render/clarisse/index.rst
+   render/houdini/index.rst
+   render/utils/index.rst
+   render/exception.rst
+   render/para_configration.rst
+   render/architecture.rst
+   render/settings.md
+   render/demo/index.rst
+   render/questions.rst
+   render/error_status.rst
+   render/release_notes.rst
+   render/contributing_to_sdk.rst
 
 
 
