@@ -9,7 +9,6 @@
 .. toctree::
    :maxdepth: 4
 
-   /render/index
    /render/first_look
    /render/installation_guide
    /render/SDK_tutorial.md
