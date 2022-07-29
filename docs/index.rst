@@ -17,9 +17,6 @@
    /render/log/index
    /render/api/rayvision_api/task/check
    /render/sync/index
-   /render/maya/index
-   /render/clarisse/index
-   /render/houdini/index
    /render/utils/index
    /render/exception
    /render/para_configration
