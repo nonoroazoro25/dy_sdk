@@ -9,7 +9,6 @@
 .. toctree::
    :maxdepth: 4
 
-   first_look
    /render/index
    /render/first_look
    /render/installation_guide
