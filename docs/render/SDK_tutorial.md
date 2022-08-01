@@ -4,7 +4,7 @@
 
 ```
 render_para = {
-    "domain": "task.renderbus.com",
+    "domain": "task.dayancloud.com",
     "platform": "54",
     "access_id": "xxxx",
     "access_key": "xxxx",
@@ -22,8 +22,8 @@ RayvisionAPI 参数说明:
 
 | 参数       | 类型   | 是否必须 | 默认值             | 说明                                                         |
 | ---------- | ------ | -------- | ------------------ | ------------------------------------------------------------ |
-| domain     | string | 否       | task.dayancloud.com | 国内用户：task.dayancloud.com，国外用户:jop.foxrenderfarm.com |
-| platform   | string | 否       | 54                  | 平台ID          |
+| domain     | string | 是       | task.dayancloud.com | 国内用户：task.dayancloud.com，国外用户:jop.foxrenderfarm.com |
+| platform   | string | 是       | 54                  | 平台ID          |
 | access_id  | string | 是       |                    | 授权id，用于标识API调用者身份                                |
 | access_key | string | 是       |                    | 授权密钥，用于加密签名字符串和服务器端验证签名字符串         |
 
@@ -31,10 +31,6 @@ RayvisionAPI 参数说明:
 
 ### 二. 分析场景
 
-> 分析是独立(Maya / Houdini / Clarisse)
-
-
-以分析Houdini为例
 ```
 from rayvision_houdini.analyze_houdini import AnalyzeHoudini
 
@@ -74,72 +70,13 @@ AnalyzeHoudini 参数说明:
 | workspace        | string | 否       | None   | 分析生成json文件位置(避免重复会自动添加一个时间戳文件夹) |
 
 
-
-### 三. 添加特殊字段和更新json文件接口
-> 只支持对task.json和upload.json文件参数的更新和修改.
-
-##### 1. 修改task.json
-
-`update_task_info(update_info, task_path)`
-
-![task_info](https://blog-tao625.oss-cn-shenzhen.aliyuncs.com/izone/blog/20200402094336.png)
-
-```
-from rayvision_api.utils import update_task_info, append_to_task, append_to_upload
-update_task = {
-    "pre_frames": "100",  # 设置优先渲染首帧
-    "stop_after_test": "1"  # 渲染完优先帧后停止渲染
-}
-update_task_info(update_task, analyze_obj.task_json)
-```
-
-##### 2. task.json添加自定义参数
-
-> 添加的自定义参数将会集成到key为"additional_info"的字典中  
- 【注意】：自定义参数不会立即生效，如果有这种需求的客户请联系公司客服。
-
-![additional_info](https://blog-tao625.oss-cn-shenzhen.aliyuncs.com/izone/blog/20200402094058.png)
-
-```
-custom_info_to_task = {
-    "env": "houdini_env"
-}
-append_to_task(custom_info_to_task, analyze_obj.task_json)
-```
-
-##### 3. 自定义upload.json
-> 支持自定义添加文件路径到upload.json，会自动去重
-`append_to_upload(files_paths, upload_path)`
-
-![upload](https://blog-tao625.oss-cn-shenzhen.aliyuncs.com/izone/blog/20200402094235.png)
-
-```
-custom_info_to_upload = [
-    r"D:\houdini\CG file\Cam003\cam.abc",
-]
-append_to_upload(custom_info_to_upload, analyze_obj.upload_json)
-```
-
-### 四. 设置硬件配置和校验json文件
-
-硬件配置由参数"hardwareConfigId"控制, 可以通过api接口获取("API接口使用方法" --> "获取平台硬件配置信息")
-
-通过设置hardware_config的 `model`, `ram`, `gpuNum` 来指定硬件配置
-```
-hardware_config = {
-    "model": "Default",  # CPU平台: 填Default , GPU平台: 填 1080Ti 或 2080Ti
-    "ram": "64GB",  # 内存: 64GB or 128GB
-    "gpuNum": None  # GPU平台需要输入参数 例："2*GPU", CPU平台则填写 None
-}
-```
-
-校验的时候会根据传入的hardware_config设置硬件配置, 还会检查task.json中是 否有`user_id`,`project_id`,`task_id`,
-如果没有则会调用接口从服务器获取相关参数并写入task.json
+### 三. 校验json文件
 
 ```
 check_obj = RayvisionCheck(api, analyze_obj)
 task_id = check_obj.execute(hardware_config, analyze_obj.task_json, analyze_obj.upload_json)
 ```
+
 
 ### 五. 上传
 > 现在提供2种方式:

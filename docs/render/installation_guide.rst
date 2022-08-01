@@ -37,12 +37,12 @@ SDK contextcapture:
 
 - 从Python官方pypi下载
 
-   ``pip install dayan_contextcapture``
+   ``pip install dayan_api``
 
 
 **方法二:**
 
-   - 直接从GitHub下载源码(以maya为例):
+   - 直接从GitHub下载源码(以dayan_api为例):
 
-   ``git clone https://github.com/renderbus/rayvision_maya.git``
+   ``git clone https://github.com/renderbus/dayan_api.git``
 
