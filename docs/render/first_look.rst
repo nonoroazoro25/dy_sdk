@@ -34,7 +34,7 @@
 支持的软件
 ----------
 
--  contextcapture
+-  ContextCapture
 
 .. _header-n19:
 
