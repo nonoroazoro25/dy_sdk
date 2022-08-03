@@ -329,7 +329,7 @@ stop_task = api.task.stop_task(task_param_list=[13798105])
 }
 ```
 
-## 重提失败帧
+## 重提帧
 
 **接口路径**：  /api/rendering/task/renderingTask/recommitFailFrame
 
@@ -338,7 +338,7 @@ stop_task = api.task.stop_task(task_param_list=[13798105])
 | **参数**        | **类型**        | 是否必须 | **说明**                                 | **备注** |
 | --------------- | --------------- | -------- | ---------------------------------------- | -------- |
 | task_param_list | List\<Integer\> | Y        | 任务号集合                               |          |
-| status          | List\<Integer>  | Y        | 重提的帧任务状态集合|          |
+| status          | List\<Integer>  | Y        | 重提的帧任务状态集合状态码--1 等待;2 开始;3 中止;4 完成;5 失败;11 超时|          |
 
 **返回参数**：缺省
 
@@ -361,39 +361,6 @@ restart_failed_frames = api.query.restart_failed_frames(task_param_list=[1378898
 }
 ```
 
-## 根据帧ID重提任务指定帧
-
-**接口路径**：  /api/render/handle/recommitTaskFrames
-
-**请求参数**：
-
-| **参数**   | **类型**        | 是否必须 | **说明**     | **备注**                                           |
-| ---------- | --------------- | -------- | ------------ | -------------------------------------------------- |
-| task_id    | Integer         | N        | 任务ID       | task_id和ids_list任选其一必填                      |
-| ids_list   | List\<Integer\> | N        | 帧ID集合     | task_id和ids_list任选其一必填, select_all为0时生效 |
-| select_all | Integer         | N        | 是否全部重提 | 1全部重提，0指定帧重提                             |
-| status     | List\<Integer>  | N        | 帧状态       | 只有传taskId才生效                                 |
-
-**返回参数**：缺省
-
-**请求示例**：
-
-```python
-restart_frame = api.query.restart_frame(task_id=14362099, select_all=1)
-```
-
-**返回示例**：
-
-```json
-{
-    "version": "1.0.0",
-    "result": true,
-    "message": "success",
-    "code": 200,
-    "data": null,
-    "serverTime": 1535957894211
-}
-```
 
 ## 获取任务详情
 
