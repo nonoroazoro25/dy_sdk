@@ -22,28 +22,44 @@ RayvisionAPI 参数说明:
 
 | 参数       | 类型   | 是否必须 | 默认值             | 说明                                                         |
 | ---------- | ------ | -------- | ------------------ | ------------------------------------------------------------ |
-| domain     | string | 是       | task.dayancloud.com | 国内用户：task.dayancloud.com，国外用户:jop.foxrenderfarm.com |
+| domain     | string | 是       | task.dayancloud.com | 国内用户：task.dayancloud.com|
 | platform   | string | 是       | 54                  | 平台ID          |
 | access_id  | string | 是       |                    | 授权id，用于标识API调用者身份                                |
 | access_key | string | 是       |                    | 授权密钥，用于加密签名字符串和服务器端验证签名字符串         |
 
 
 
-### 二. 分析场景
+### 二. 重建分析场景
 
 ```
-from rayvision_houdini.analyze_houdini import AnalyzeHoudini
+from analyze_contextcapture import AnalyzeContextCapture
 
 analyze_info = {
-    "cg_file": r"D:\files\CG FILE\flip_test_slice4.hip",
-    "workspace": "c:/workspace",
-    "software_version": "17.5.293",
-    "project_name": "Project1",
-    "plugin_config": {
-        'renderman': '22.6'
+    "xml_file": r"G:\local\Block_1 - AT - export.xml",
+    "world_coord_sys": "EPSG:4544",
+    "output_type": ["OSGB"],
+    "kml_file": r"",
+    "photo_group_path": [r"G:\local\Images"],
+    "workspace": "G:/workspace",
+    "project_name": "SDK_TEST_failed",
+    "platform": render_para['platform'],
+    "sensor_size": "",
+    "tile_mode": "0",
+    "is_set_origin_coord": "0",
+    "origin_coord": {
+        "coord_z": "",
+        "coord_y": "",
+        "coord_x": ""
+    },
+    "is_set_offset_coord": "0",
+    "offset_coord": {
+        "coord_z": "",
+        "coord_y": "",
+        "coord_x": ""
     }
 }
-analyze_obj = AnalyzeHoudini(**analyze_info)
+
+analyze_obj = AnalyzeContextCapture(**analyze_info)
 analyze_obj.analyse()
 ```
 
@@ -59,15 +75,24 @@ analyze_obj.analyse()
 - 分析生成的task.json中“task_id”、“user_id”、"project_id"为空，用户可以选择自己写   入这三个参数 ,或者在check的时候自动写入此3个参数。
 
 
-AnalyzeHoudini 参数说明:
+AnalyzeContextCapture 参数说明:
 
 | 参数             | 类型   | 是否必须 | 默认值 | 说明                                                     |
 | ---------------- | ------ | -------- | ------ | -------------------------------------------------------- |
-| cg_file          | string | 是       |        | 需要分析的场景文件                                       |
-| software_version | string | 是       |        | 场景使用的软件版本                                       |
-| project_name     | string | 否       |        | 项目名                                                   |
-| plugin_config    | dict   | 否       |        | 插件配置，如 {'renderman': '22.6'}                       |
-| workspace        | string | 否       | None   | 分析生成json文件位置(避免重复会自动添加一个时间戳文件夹) |
+| xml_file | string | 是       |        | 区块路径                                       |
+| world_coord_sys     | string | 是       |        | 坐标系                                                   |
+| output_type    | list   | 是       |        | 生产类型                       |
+| kml_file        | string | 否       |    | 范围文件路径 |
+| photo_group_path        | string | 是       |    | 照片组 |
+| workspace        | string | 是       |    | 存放配置文件路径 |
+| project_name        | string | 是       |    | 项目名 |
+| platform        | string | 是       | 54   | 平台ID |
+| sensor_size        | string | 否       |    | 传感器尺寸 |
+| tile_mode        | string | 是       | 0   | 切块方式；0为规则水平切块，1为自适应切块 |
+| is_set_origin_coord        | string | 否       |   | 是否设置重建偏移坐标  |
+| origin_coord        | dict | is_set_origin_coord为1是必填  |    |重建偏移坐标  |
+| is_set_offset_coord        | string | 否       | None   | 是否设置生产原点坐标 |
+| offset_coord        | dict | is_set_offset_coord为1时必填    |    | 设置生产原点坐标 |
 
 
 ### 三. 校验json文件
@@ -79,7 +104,6 @@ task_id = check_obj.execute(hardware_config, analyze_obj.task_json, analyze_obj.
 
 
 ### 五. 上传
-> 现在提供2种方式:
 
 ##### 1.先上传json文件再根据“upload.json”上传资源文件:
 
@@ -118,7 +142,7 @@ api.submit_cc(int(task_id))
 
 ```
 download = RayvisionDownload(api)
-download.auto_download_after_task_completed([18164087], download_filename_format="false")
+download.auto_download_after_task_completed([int(task_id)], local_path=r"G:\sdk_result", download_type='render')
 ```
 说明: 此方法任务ID不能为空
 
