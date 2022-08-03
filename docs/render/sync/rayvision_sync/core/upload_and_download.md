@@ -25,7 +25,7 @@ def upload(self, task_id, task_json_path, tips_json_path, asset_json_path,
 使用样例:
 
 ```
-from rayvision_api import RayvisionAPI
+from dayan_api import RayvisionAPI
 from rayvision_sync.upload import RayvisionUpload
 
 api = RayvisionAPI(access_id="xxxxx",
@@ -47,15 +47,7 @@ upload_obj.upload("5165465", **CONFIG_PATH)
 
 #### 2. 上传文件类型(transmit_type)
 
-> 上传文件由参数"transmit_type"控制, 支持2中传输文件类型: ”upload_list“ 和”upload_json“
-
-- upload_list
-
-  > 这种上传模式指定的“upload_json_path”文件(支持txt和json文件)内容每一行可以是一个文件绝对路径或者文件夹绝对路径，如果是文件夹则会上传文件夹里面所有文件。
-
-  例如:
-
-  ![](https://blog-tao625.oss-cn-shenzhen.aliyuncs.com/izone/blog/20201116160335.png)
+> 上传文件由参数"transmit_type"控制, 支持传输文件类型: ”upload_json“
 
 - upload_json
 
