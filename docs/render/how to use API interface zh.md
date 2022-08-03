@@ -2,12 +2,12 @@
 
 ## 准备工作
 
-所有的接口调用都是通过rayvision_api模块，在使用前必须先实例化一个api对象：
+所有的接口调用都是通过dayan_api模块，在使用前必须先实例化一个api对象：
 
 ```python
 user_info = {
-    "domain_name": "task.renderbus.com",
-    "platform": "2",
+    "domain_name": "task.dayancloud.com",
+    "platform": "54",
     "access_id": "xxxxxxxxxxxxxxxxxxxxxx",
     "access_key": "xxxxxxxxxxxxxxxxxxxxx",
 }
@@ -22,7 +22,7 @@ api = RayvisionAPI(access_id=user_info['access_id'],
 **说明**：
 
 1. 以下接口调用会直接使用以上实例的api进行调用；
-2. 返回示例中显示的是原始接口结果，实际在rayvision_api中接口返回给用户的只是“data”参数值；
+2. 返回示例中显示的是原始接口结果，实际在dayan_api中接口返回给用户的只是“data”参数值；
 
 
 ## 获取用户详情

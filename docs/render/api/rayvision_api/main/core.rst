@@ -1,8 +1,8 @@
-RayvisionAPI
+DayanAPI
 --------------------------
 
 
-rayvision_api的入口脚本
+dayan_api的入口脚本
 
 .. automodule:: rayvision_api.core
    :members:
