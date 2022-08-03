@@ -25,7 +25,7 @@ from recommonmark.parser import CommonMarkParser
 
 # add package to system path
 all_package_name =[
-    "rayvision_api",
+    "dayan_api",
     "rayvision_log",
     "rayvision_utils",
     "rayvision_clarisse",
@@ -75,8 +75,8 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = u'RenderBus SDK'
-copyright = u'2019 Rayvision Core Dev Team'
+project = u'DayanCloud SDK'
+copyright = u'2022 Rayvision Core Dev Team'
 author = u''
 
 # The version info for the project you're documenting, acts as replacement for
@@ -133,7 +133,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Renderbus SDK'
+htmlhelp_basename = 'DayanCloud SDK'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -160,7 +160,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'RenderBus SDK.tex', u'RenderBus SDK Documentation',
+    (master_doc, 'DayanCloud SDK.tex', u'DayanCloud SDK Documentation',
      u'', 'manual'),
 ]
 
@@ -170,7 +170,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'RenderBus SDK', u'RenderBus SDK Documentation',
+    (master_doc, 'DayanCloud SDK', u'DayanCloud SDK Documentation',
      [author], 1)
 ]
 
@@ -181,8 +181,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'RenderBus SDK', u'RenderBus SDK Documentation',
-     author, 'RenderBus SDK',
+    (master_doc, 'DayanCloud SDK', u'DayanCloud SDK Documentation',
+     author, 'DayanCloud SDK',
      'Shame on Yu tao',
      'Miscellaneous'),
 ]
