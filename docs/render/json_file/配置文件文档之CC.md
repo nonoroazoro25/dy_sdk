@@ -16,9 +16,9 @@ CC 配置文件文档
 ```json
 {
   "user_setting": {
-    "user_key": "rsat:4MIiDYdYSwsTnCaRKFVy4ghNrGv",
-    "user_id": 100572091,
-    "user_name": "hai15130920706",
+    "user_key": "rsat:4MIiDYdYAwsAnCaRKFVy4ghAaaa",
+    "user_id": 100552222,
+    "user_name": "dy_user",
     "acount_type": 1,
     "parent_id": 0,
     "shareMainCapital": false,
@@ -28,24 +28,24 @@ CC 配置文件文档
     "block_merge": 1,
     "kmls": [
       {
-        "kml_name": "F:/hubei/KML/1.kml",
+        "kml_name": "G:/test_data/KML/1.kml",
         "kml_id": "0",
         "total_pixel": "",
-        "content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGttbD4KICA8RG9jdW1lbnQ+CiAgICA8UGxhY2VtYXJrPgogICAgICA8bmFtZT5RSzE8L25hbWU+CiAgICAgIDx2aXNpYmlsaXR5PjE8L3Zpc2liaWxpdHk+CiAgICAgIDxQb2x5Z29uPgogICAgICAgIDxhbHRpdHVkZU1vZGU+Y2xhbXBUb0dyb3VuZDwvYWx0aXR1ZGVNb2RlPgogICAgICAgIDxvdXRlckJvdW5kYXJ5SXM+CiAgICAgICAgICA8TGluZWFyUmluZz4KICAgICAgICAgICAgPGNvb3JkaW5hdGVzPgogICAgICAgICAgICAgIDExNC42NzQ1MjE0MDU0LDI5LjY3Mjk3NjIxNiwwCiAgICAgICAgICAgICAgMTE0LjY3NDg5Njc5NDMsMjkuNzAyOTAzMDU4NywwCiAgICAgICAgICAgICAgMTE0LjY5MTE4OTQwNTgsMjkuNzAwNDc2OTk2MSwwCiAgICAgICAgICAgICAgMTE0LjY5NzU4Njg2MDMsMjkuNjkxMzYxMjQ5OCwwCiAgICAgICAgICAgICAgMTE0LjY5MTMxMzQzMSwyOS42Nzg1MzQ4NzQ5LDAKICAgICAgICAgICAgICAxMTQuNjg3MDIwMTYwMywyOS42NzI2MTc3MTA5LDAKICAgICAgICAgICAgICAxMTQuNjc0NTIxNDA1NCwyOS42NzI5NzYyMTYsMAogICAgICAgICAgICA8L2Nvb3JkaW5hdGVzPgogICAgICAgICAgPC9MaW5lYXJSaW5nPgogICAgICAgIDwvb3V0ZXJCb3VuZGFyeUlzPgogICAgICA8L1BvbHlnb24+CiAgICA8L1BsYWNlbWFyaz4KICA8L0RvY3VtZW50Pgo8L2ttbD4KDQo=",
+        "content": "50Pgo8L2ttbD4KDQo=",
         "fileSize": "1255"
       },
       {
-        "kml_name": "F:/hubei/KML/2.kml",
+        "kml_name": "G:/test_data/KML/2.kml",
         "kml_id": "1",
         "total_pixel": "",
-        "content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGttbD4KICA8RG9jdW1lbnQ+CiAgICA8UGxhY2VtYXJrPgogICAgICA8bmFtZT5RSzM8L25hbWU+CiAgICAgIDx2aXNpYmlsaXR5PjE8L3Zpc2liaWxpdHk+CiAgICAgIDxQb2x5Z29uPgogICAgICAgIDxhbHRpdHVkZU1vZGU+Y2xhbXBUb0dyb3VuZDwvYWx0aXR1ZGVNb2RlPgogICAgICAgIDxvdXRlckJvdW5kYXJ5SXM+CiAgICAgICAgICA8TGluZWFyUmluZz4KICAgICAgICAgICAgPGNvb3JkaW5hdGVzPgogICAgICAgICAgICAgIDExNC42NzQ3OTQzNTAxLDI5LjcwNDYyNTY3NTYsMAogICAgICAgICAgICAgIDExNC42Nzk3MjA5MTg1LDI5LjcwMzg4MDIxODMsMAogICAgICAgICAgICAgIDExNC42NzkzMTAwMTU2LDI5LjY4NDIyMzk4OTIsMAogICAgICAgICAgICAgIDExNC42Nzc0NzA4OTQyLDI5LjY4Mzc3Nzg3MTQsMAogICAgICAgICAgICAgIDExNC42Njg5NTYxNTcyLDI5LjY4NDQ2MTQwMiwwCiAgICAgICAgICAgICAgMTE0LjY2MjgxNzIwMTEsMjkuNjgxNTkwMjU0NSwwCiAgICAgICAgICAgICAgMTE0LjY1MTQzMjkxMTMsMjkuNjgwMTI0OTIzMywwCiAgICAgICAgICAgICAgMTE0LjY1MTUwMzkzMzksMjkuNjkwODc0NTYwMywwCiAgICAgICAgICAgICAgMTE0LjY1NzUwOTQ2NTksMjkuNzAwNzE4NjAzNCwwCiAgICAgICAgICAgICAgMTE0LjY3NDc5NDM1MDEsMjkuNzA0NjI1Njc1NiwwCiAgICAgICAgICAgIDwvY29vcmRpbmF0ZXM+CiAgICAgICAgICA8L0xpbmVhclJpbmc+CiAgICAgICAgPC9vdXRlckJvdW5kYXJ5SXM+CiAgICAgIDwvUG9seWdvbj4KICAgIDwvUGxhY2VtYXJrPgogIDwvRG9jdW1lbnQ+Cjwva21sPgoNCg==",
+        "content": "50Pgo8L2ttbD4KDQo=",
         "fileSize": "1256"
       },
       {
-        "kml_name": "F:/hubei/KML/3.kml",
+        "kml_name": "G:/test_data/KML/3.kml",
         "kml_id": "2",
         "total_pixel": "",
-        "content": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGttbD4KICA8RG9jdW1lbnQ+CiAgICA8UGxhY2VtYXJrPgogICAgICA8bmFtZT5RSzQ8L25hbWU+CiAgICAgIDx2aXNpYmlsaXR5PjE8L3Zpc2liaWxpdHk+CiAgICAgIDxQb2x5Z29uPgogICAgICAgIDxhbHRpdHVkZU1vZGU+Y2xhbXBUb0dyb3VuZDwvYWx0aXR1ZGVNb2RlPgogICAgICAgIDxvdXRlckJvdW5kYXJ5SXM+CiAgICAgICAgICA8TGluZWFyUmluZz4KICAgICAgICAgICAgPGNvb3JkaW5hdGVzPgogICAgICAgICAgICAgIDExNC42NTA1ODk2NzIzLDI5LjY4MDkwOTY4NTUsMAogICAgICAgICAgICAgIDExNC42NjMzMDIxMTQ0LDI5LjY4MjgyNzQ1MDQsMAogICAgICAgICAgICAgIDExNC42NjkzMjAxNTMzLDI5LjY4NTk3MTI3MSwwCiAgICAgICAgICAgICAgMTE0LjY3OTE5NTEyMjcsMjkuNjg0OTI1MTc1MSwwCiAgICAgICAgICAgICAgMTE0LjY3OTMzNjMwMzEsMjkuNjcxNTM3MTkwMiwwCiAgICAgICAgICAgICAgMTE0LjY2NDE1MjAxMDc3NCwyOS42NjU0MDQ1NTk5ODU4LDAKICAgICAgICAgICAgICAxMTQuNjU1MzM3NTc1OSwyOS42Njk2NDI0MjI5LDAKICAgICAgICAgICAgICAxMTQuNjUwMDU1OTc4NSwyOS42NzM4NDg3MTgzLDAKICAgICAgICAgICAgICAxMTQuNjUwNTg5NjcyMywyOS42ODA5MDk2ODU1LDAKICAgICAgICAgICAgPC9jb29yZGluYXRlcz4KICAgICAgICAgIDwvTGluZWFyUmluZz4KICAgICAgICA8L291dGVyQm91bmRhcnlJcz4KICAgICAgPC9Qb2x5Z29uPgogICAgPC9QbGFjZW1hcms+CiAgPC9Eb2N1bWVudD4KPC9rbWw+Cg0K",
+        "content": "50Pgo8L2ttbD4KDQo=",
         "fileSize": "1136"
       }
     ]
@@ -72,17 +72,17 @@ CC 配置文件文档
   },
   "client_setting": {
     "login_name": "Administrator",
-    "build": "Build 2022-6-30",
+    "build": "Build 2022-5-16",
     "client_cmd": "rendercmd.exe",
-    "date_time": "2022-07-30 10:45:56",
+    "date_time": "2022-06-30 10:35:26",
     "status": "1",
     "language": 0,
     "version": "5.0.4.9",
-    "ip": "192.168.2.124",
+    "ip": "0.0.0.0",
     "client_inst_path": "D:/ProgramData/Rayvision/DayanCloud5.0",
     "auto_download": false,
-    "mac": "7C:10:C9:43:DF:E0",
-    "client_project_dir": "C:/DayanCloud/Project/192929",
+    "mac": "00:00:00:00:00:00",
+    "client_project_dir": "C:/DayanCloud/Project/1222",
     "transmit_line": "电信",
     "system_locale": "zh_CN",
     "mode": "",
@@ -100,43 +100,43 @@ CC 配置文件文档
       "rangeFile": {},
       "lockRange": 1,
       "tileMode": "0",
-      "worldCoordSys": "EPSG:4547"
+      "worldCoordSys": "EPSG:4544"
     },
     "run_model": "normal",
     "group": {
       "groups": [
         {
-          "pic_height": 5304,
-          "pic_count": 560,
-          "group_name": "6",
+          "pic_height": 4432,
+          "pic_count": 262,
+          "group_name": "group1",
           "focal_length": "56",
-          "pic_width": 7952,
-          "group_path": "F:/hubei/0615/6",
-          "total_pixel": "23619348480",
-          "group_id": "{582af9e3-0e85-4bc7-8fb4-ad9e0eda7c3b}",
+          "pic_width": 6666,
+          "group_path": "G:/test_data/group/group1",
+          "total_pixel": "2250",
+          "group_id": "{58333dd9e3-44r-55t-55t-4545ff4}",
           "pos_info": {},
           "camera_producter": "SONY",
-          "camera_model": "ILCE-7RM2",
+          "camera_model": "model1",
           "sensor_size": "35.9"
         },
         {
-          "pic_height": 5304,
-          "pic_count": 673,
-          "group_name": "1",
+          "pic_height": 5433,
+          "pic_count": 260,
+          "group_name": "group2",
           "focal_length": "56",
-          "pic_width": 7952,
-          "group_path": "F:/hubei/0616/1",
-          "total_pixel": "28385395584",
-          "group_id": "{1fb70bc0-e937-4efe-98d5-9f59cf7bfdfa}",
+          "pic_width": 5555,
+          "group_path": "G:/test_data/group/group2",
+          "total_pixel": "2250",
+          "group_id": "{58333dd9e3-44r-tt54d-55t-4545ff4}",
           "pos_info": {},
           "camera_producter": "SONY",
           "camera_model": "ILCE-7RM2",
           "sensor_size": "35.9"
         }
       ],
-      "total_pixel": "899656349952",
-      "project_name": "XK1",
-      "pic_count": 28553,
+      "total_pixel": "4500",
+      "project_name": "test_project",
+      "pic_count": 522,
       "job_type": 0
     },
     "blocks_info": [
@@ -160,37 +160,37 @@ CC 配置文件文档
     "group": {
       "groups": [
         {
-          "pic_height": 5304,
-          "pic_count": 560,
-          "group_name": "6",
+          "pic_height": 4432,
+          "pic_count": 262,
+          "group_name": "group1",
           "focal_length": "56",
-          "pic_width": 7952,
-          "group_path": "F:/hubei/0615/6",
-          "total_pixel": "23619348480",
-          "group_id": "{582af9e3-0e85-4bc7-8fb4-ad9e0eda7c3b}",
+          "pic_width": 6666,
+          "group_path": "G:/test_data/group/group1",
+          "total_pixel": "2250",
+          "group_id": "{58333dd9e3-44r-55t-55t-4545ff4}",
+          "pos_info": {},
+          "camera_producter": "SONY",
+          "camera_model": "model1",
+          "sensor_size": "35.9"
+        },
+        {
+          "pic_height": 5433,
+          "pic_count": 260,
+          "group_name": "group2",
+          "focal_length": "56",
+          "pic_width": 5555,
+          "group_path": "G:/test_data/group/group2",
+          "total_pixel": "2250",
+          "group_id": "{58333dd9e3-44r-tt54d-55t-4545ff4}",
           "pos_info": {},
           "camera_producter": "SONY",
           "camera_model": "ILCE-7RM2",
           "sensor_size": "35.9"
-        },
-        {
-          "pic_height": 4000,
-          "pic_count": 907,
-          "group_name": "4",
-          "focal_length": "35",
-          "pic_width": 6000,
-          "group_path": "F:/hubei/0712/2/zp/4",
-          "total_pixel": "21768000000",
-          "group_id": "{7a982170-5c72-41e1-ac8c-6cf90453f8a1}",
-          "pos_info": {},
-          "camera_producter": "SONY",
-          "camera_model": "ILCE-5100",
-          "sensor_size": "23.5"
         }
       ],
-      "total_pixel": "899656349952",
-      "project_name": "XK1",
-      "pic_count": 28553,
+      "total_pixel": "4500",
+      "project_name": "test_project",
+      "pic_count": 522,
       "job_type": 0
     },
     "blocks_info": [
@@ -206,7 +206,7 @@ CC 配置文件文档
       "rangeFile": {},
       "lockRange": 1,
       "tileMode": "0",
-      "worldCoordSys": "EPSG:4547"
+      "worldCoordSys": "EPSG:4544"
     },
     "contrl_point": {},
     "blocks": [
@@ -214,7 +214,7 @@ CC 配置文件文档
     ]
   },
   "task_info": {
-    "job_id_alias": "192929",
+    "job_id_alias": "1222",
     "edit_name": "",
     "stop_after_test": "1",
     "platform": "54",
@@ -223,12 +223,12 @@ CC 配置文件文档
     "channel": "9",
     "is_picture": "1",
     "time_out": "43200",
-    "task_id": "192929",
+    "task_id": "1222",
     "project_id": "0",
     "config_name": "",
-    "project_name": "XK1",
+    "project_name": "test_project",
     "render_layer_type": "0",
-    "job_id": "192929",
+    "job_id": "1222",
     "tiles_type": "strip",
     "job_stop_time": "259200",
     "pre_frames": "",
@@ -236,7 +236,7 @@ CC 配置文件文档
     "cg_id": "2017",
     "locationoutput": "C:/DayanCloud/Download",
     "graphics_cards_num": "2",
-    "input_cg_file": "F:/hubei/0615/6",
+    "input_cg_file": "G:/test_data/group/group1",
     "tiles": "1",
     "is_distribute_render": "0",
     "frames_per_task": "1",
@@ -248,7 +248,7 @@ CC 配置文件文档
     "ignoreMapFlag": 0,
     "manuallyStartAnalysisFlag": 0
   },
-  "small_task_id": "202551"
+  "small_task_id": "2311"
 }
 ```
 
