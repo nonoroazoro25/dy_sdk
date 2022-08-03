@@ -334,12 +334,12 @@ download.auto_download([49240085], network_mode=2)
 
 #####    1. 上传自定义传输地址和自定义传输引擎设置
 
-> 传输引擎支持：aspera 和 raysync
+> 传输引擎支持：raysync
 
 - upload_asset
 
   > ```python
-  > UPLOAD.upload_asset(r"D:\test\upload.json", engine_type='aspera', server_ip="45.251.92.16", server_port="12121")
+  > UPLOAD.upload_asset(r"D:\test\upload.json", engine_type='raysync', server_ip="45.251.92.16", server_port="12121")
   > ```
 
 - upload_config
@@ -361,7 +361,7 @@ download.auto_download([49240085], network_mode=2)
 
   ```python
   UPLOAD.upload(task_id="41235091",
-                    engine_type='aspera',
+                    engine_type='raysync',
                     server_ip="45.251.92.16",
                     server_port="12121",
                     task_json_path=r"C:\workspace\work\task.json",
@@ -370,13 +370,17 @@ download.auto_download([49240085], network_mode=2)
                     upload_json_path=r"C:\workspace\work\upload.json")
   ```
 
-##### 2. 下载自定义传输地址和自定义传输引擎设置
+##### 2. 下载空三区块和生产成果
+
+- download block
+  ```
+  download.download_block(task_id_list=[int(task_id)], local_path=local_path, download_type='block')
+  ```
 
 
 - auto_download_after_task_completed
-
   ```
-  download.auto_download_after_task_completed([49228557], server_ip="45.251.92.16", server_port="12121")
+  download.auto_download_after_task_completed([49228557], local_path=r"G:\sdk_result", download_type='render')
   ```
 
   
