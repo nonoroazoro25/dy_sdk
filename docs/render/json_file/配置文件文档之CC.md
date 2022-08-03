@@ -341,7 +341,7 @@ groups | list | Y | 照片组信息 | [见groups解析](#scene_info.group.groups
 total_pixel | string | Y | 总像素 | "899656349952"
 project_name | string | Y | 工程名 | "test_project"
 pic_count | int | Y | 照片数量 | 3331
-job_type | int | Y | 控制点信息 0为照片提交空三，1为区块提交重建 |  0
+job_type | int | Y | 任务类型 1为区块重建 0为照片提交空三 |  0
 
 **<span id="scene_info.group.groups">scene_info.group.groups对象解析</span>**
 
