@@ -259,9 +259,9 @@ CC 配置文件文档
 参数 | 类型 | 是否必须 | 说明 | 示例
 ---|---|---|---|---
 user_setting | object | Y | 用户信息 | [见user_setting对象解析](#user_setting)
-many_at | object | N | 分块空三 | [many_at](#many_at)
+many_at | object | N | 分块空三 | [见many_at](#many_at)
 task_info | object | Y | 作业信息 | [见task_info对象解析](#task_info)
-scene_info | object | Y | 空三任务信息 | [scene_info](#scene_info)
+scene_info | object | Y | 空三任务信息 | [见scene_info](#scene_info)
 scene_info_render | object | Y | 重建生产任务信息 | [见scene_info_render对象解析](#scene_info_render)
 software_config | object | Y | 渲染环境（软件类型、版本和用到的插件等） | [见software_config对象解析](#software_config)
 
@@ -329,7 +329,7 @@ fileSize | string | Y | 文件大小 | "1255"
 参数 | 类型 | 是否必须 | 说明 | 示例
 ---|---|---|---|---
 group | dict | Y | 照片信息 | [见group解析](#scene_info.group)
-blocks_info | list | Y | 区块路径 | "G:\test\Block_6 - AT - export.xml"
+blocks_info | list | Y | 区块路径 | ["G:\test\Block_6 - AT - export.xml"]
 param | dict | Y | 重建信息 |
 contrl_point | dict | Y | 控制点信息 |
 
@@ -376,11 +376,9 @@ splite_char | string | Y | 分隔符 | ","
 ---|---|---|---|---
 param | dict | Y | 重建参数 | [见scene_info_render.param解析](#scene_info_render.param)
 group | dict | Y | 照片信息 | [见group解析](#scene_info.group)
-blocks_info | list | Y | 区块文件 | "D:/test/no_pos/block.xml"
-contrl_point | dict | N | 控制点文件 | "D:/test2/no_pos/111_1.txt"
-blocks | list | Y | 分块数量 | "blocks": [
-                                          "1"
-                                        ]
+blocks_info | list | Y | 区块文件 | ["D:/test/no_pos/block.xml"]
+contrl_point | dict | N | 控制点文件 | ["D:/test2/no_pos/111_1.txt"]
+blocks | list | Y | 分块数量 | "blocks": ["1"]
 
 
 **<span id="scene_info_render.param">scene_info_render.param对象解析</span>**
@@ -388,9 +386,7 @@ blocks | list | Y | 分块数量 | "blocks": [
 参数 | 类型 | 是否必须 | 说明 | 示例
 ---|---|---|---|---
 tileSize | string | Y | 切块尺寸 | 默认空就行
-outputType | list | Y | 生产类型 | "outputType": [
-                                                    "OSGB"
-                                                  ],
+outputType | list | Y | 生产类型 | "outputType": ["OSGB", "TIFF"],
 rangeFile | dict | Y | 范围文件 | [见scene_info_render.param.rangeFile解析](#scene_info_render.param.rangeFile)
 lockRange | int | Y | 是否上传范围 1为上传;0为不上床 | "0"
 tileMode | string | Y | 切块方式 0为规则水平分块；1为自适应切块 | "0"
