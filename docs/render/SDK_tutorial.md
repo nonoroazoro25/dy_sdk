@@ -91,7 +91,7 @@ AnalyzeContextCapture 参数说明:
 | tile_mode        | string | 是       | 0   | 切块方式；0为规则水平切块，1为自适应切块 |
 | is_set_origin_coord        | string | 否       |   | 是否设置重建偏移坐标  |
 | origin_coord        | dict | is_set_origin_coord为1是必填  |    |重建偏移坐标  |
-| is_set_offset_coord        | string | 否       | None   | 是否设置生产原点坐标 |
+| is_set_offset_coord        | string | 否       |    | 是否设置生产原点坐标 |
 | offset_coord        | dict | is_set_offset_coord为1时必填    |    | 设置生产原点坐标 |
 
 
@@ -134,11 +134,7 @@ api.submit_cc(int(task_id))
 
 ##### 1. 任务所有帧渲染完成才开始下载
 
-`auto_download_after_task_completed(self, task_id_list=None,
-                                           max_speed=None, print_log=True,
-                                           sleep_time=10,
-                                           download_filename_format="true",
-                                           local_path=None):`
+`auto_download_after_task_completed(self, task_id_list=None,download_filename_format="true",local_path=None,download_type='render'):`
 
 ```
 download = RayvisionDownload(api)
