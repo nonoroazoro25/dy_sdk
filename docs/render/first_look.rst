@@ -41,11 +41,13 @@
 准备工作
 --------
 
-1. 您需要一个 `RENDERBUS <https://task.renderbus.com>`__ 账号
+1. 您需要一个 `DayanCloud <https://www.dayancloud.com/>`__ 账号
 
-2. 您还需要在 `RENDERBUS
-   开发者中心 <https://task.renderbus.com/user/developer>`__
+2. 您还需要在 `DayanCloud
+   开发者中心 <https://www.dayancloud.com/>`__
    申请使用渲染SDK，并获取AccessID和AccessKey
+
+ 注意：大雁云官网暂未开放开发者中心，如有需要请联系大雁云研发
 
 .. _header-n26:
 
