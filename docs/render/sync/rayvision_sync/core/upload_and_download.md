@@ -1,138 +1,6 @@
 ### 上传
 
-#### 1. Upload文件切割
-
-> 有的upload.json文件可能有多达数十万个资源, 这时候可能就需要对upload文件进行切割。
-
-
-```
-def cutting_upload(upload_path, max_resources_number=None, after_cutting_position=None):
-    """Cut upload.json according to the number of custom files.
-
-    Args:
-        upload_path (str): upload.json absolute path.
-        max_resources_number (int): Maximum number of resources in each upload file.
-        after_cutting_position (str): save location of upload file generated after cutting.
-
-    Returns:
-        list: Absolute path of all upload files generated after cutting, excluding original upload files.
-            e.g.:
-                ['D:\\test\\test_upload\\1586250829\\upload_1.json',
-                'D:\\test\\test_upload\\1586250829\\upload_2.json']
-
-    """
-```
-使用样例:
-```
-from rayvision_sync.utils import cutting_upload
-upload_pool = cutting_upload(r"D:\test\test_upload\1586250829\upload.json", max_resources_number=800)
-```
-
-#### 2. 使用线程池控制上传
-
-```
-def def thread_pool_upload(self, upload_pool, pool_size=10, **kwargs)::
-    """Thread pool upload.
-
-    Args:
-        upload_pool (list or tuple): store a list or ancestor of uploaded files.
-        pool_size (int): thread pool size, default is 10 threads.
-
-    """
-    
-```
-
-使用样例：
-
-```
-from rayvision_api import RayvisionAPI
-from rayvision_sync.upload import RayvisionUpload
-
-api = RayvisionAPI(access_id="xxxxx",
-                   access_key="xxxxx",
-                   domain="task.renderbus.com",
-                   platform="2")
-
-UPLOAD = RayvisionUpload(api)
-UPLOAD.thread_pool_upload(upload_pool, pool_size=20)
-```
-
-#### 3. 只上传upload里面资源
-
-> 上传upload资源用户只需要登录即可
-
-```
-def upload_asset(self, upload_json_path, max_speed=None, is_db=True):
-    """Run the cmd command to upload asset files.
-
-    Args:
-        upload_json_path (str): Path to the upload.json file.
-        max_speed (str): Maximum transmission speed, default value
-            is 1048576 KB/S.
-        is_db (bool): Whether to produce local database record upload file.
-
-    Returns:
-        bool: True is success, False is failure.
-
-    """
-```
-
-使用样例：
-
-```
-from rayvision_api import RayvisionAPI
-from rayvision_sync.upload import RayvisionUpload
-
-api = RayvisionAPI(access_id="xxxxx",
-                   access_key="xxxxx",
-                   domain="task.renderbus.com",
-                   platform="2")
-                   
-UPLOAD = RayvisionUpload(api)
-UPLOAD.upload_asset(r"D:\test\test_upload\1586250829\upload.json")
-```
-
-#### 4. 只上传分析生成的json配置文件
-
-```
-def upload_config(self, task_id, config_file_list, max_speed=None):
-    """Run the cmd command to upload configuration profiles.
-
-    Args:
-        task_id (str): Task id.
-        config_file_list (list): Configuration file path list.
-        max_speed (str): Maximum transmission speed, default value
-            is 1048576 KB/S.
-
-    Returns:
-        bool: True is success, False is failure.
-
-    """
-```
-
-使用样例:
-
-```
-from rayvision_api import RayvisionAPI
-from rayvision_sync.upload import RayvisionUpload
-
-api = RayvisionAPI(access_id="xxxxx",
-                   access_key="xxxxx",
-                   domain="task.renderbus.com",
-                   platform="2")
-
-CONFIG_PATH = [
-    r"C:\workspace\work\tips.json",
-    r"C:\workspace\work\task.json",
-    r"C:\workspace\work\asset.json",
-    r"C:\workspace\work\upload.json",
-]
-
-UPLOAD = RayvisionUpload(api)
-UPLOAD.upload_config("5165465", CONFIG_PATH)
-```
-
-#### 5. 先上传配置文件然后自动根据upload文件上传资源(任务号必须)
+#### 1. 先上传配置文件然后自动根据upload文件上传资源(任务号必须)
 
 ```
 def upload(self, task_id, task_json_path, tips_json_path, asset_json_path,
@@ -176,34 +44,8 @@ upload_obj = RayvisionUpload(api)
 upload_obj.upload("5165465", **CONFIG_PATH)
 ```
 
-#### 6. append_to_upload:自定义upload.json文件
 
-```
-from rayvision_api import RayvisionAPI
-from rayvision_sync.upload import RayvisionUpload
-from rayvision_api.utils import append_to_upload
-
-api = RayvisionAPI(access_id="xxxxx",
-                   access_key="xxxxx",
-                   domain="task.renderbus.com",
-                   platform="2")
-UPLOAD = RayvisionUpload(api)
-
-# 1. 可以接受列表，列表可以传入文件夹路径或者文件路径
-custom_info_to_upload = [
-    r"E:\fang\ass_test\static_ass.ass",
-    r"E:\fang",
-    r"D:\houdini\CG file\F"
-]
-# 2.也可以接收单独的一个字符串
-# custom_info_to_upload = r"D:\houdini\CG file\katana_file"
-
-# 需要指定一个存在的upload.json路径
-append_to_upload(custom_info_to_upload, r"D:\test\upload.json")
-UPLOAD.upload_asset(r"D:\test\upload.json")
-```
-
-#### 7. 上传文件类型(transmit_type)
+#### 2. 上传文件类型(transmit_type)
 
 > 上传文件由参数"transmit_type"控制, 支持2中传输文件类型: ”upload_list“ 和”upload_json“
 
@@ -277,7 +119,7 @@ UPLOAD.upload_asset(r"D:\test\upload.json")
 使用样例
 
 ```python
-from rayvision_api import RayvisionAPI
+from dayan_api import RayvisionAPI
 from rayvision_sync.download import RayvisionDownload
 
 api = RayvisionAPI(access_id="xxx",
@@ -286,7 +128,7 @@ api = RayvisionAPI(access_id="xxx",
                    platform="2")
 
 download = RayvisionDownload(api)
-download.auto_download_after_task_completed([18164087], download_filename_format="false")
+download.auto_download_after_task_completed([int(task_id)], download_filename_format="false",local_path=r"G:\sdk_result", download_type='render')
 ```
 
 
