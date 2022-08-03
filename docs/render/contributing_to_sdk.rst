@@ -1,4 +1,4 @@
-为RenderBusSDK做贡献
+为DaYanCloud做贡献
 =====================
 
 .. important::

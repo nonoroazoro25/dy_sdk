@@ -1,12 +1,12 @@
 架构概览
 ========
-本文档介绍了RenderBus架构及其组件之间的依赖关系。
+本文档介绍了DayanCloud架构及其组件之间的依赖关系。
 
 
 组件
 -----
 
-**rayvision_log** 和 **rayvision_api** 为底层模块被其它模块锁依赖；
+**rayvision_log** 和 **dayan_api** 为底层模块被其它模块锁依赖；
 
 **rayvision_utils** 虽然作为通用模块但是集成了CG配置信息的预处理功能；
 还是会调用 **rayvision_api** 的服务器接口；
