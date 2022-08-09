@@ -4,7 +4,7 @@
  ::
 
     from dayan_api.core import RayvisionAPI
-    from analyze_contextcapture import AnalyzeContextCapture
+    from dayan_contextcapture.analyze_contextcapture import AnalyzeContextCapture
     from rayvision_sync.upload import RayvisionUpload
     from rayvision_sync.download import RayvisionDownload
     from dayan_api.task.check import RayvisionCheck
@@ -184,7 +184,7 @@
                                  'worldCoordSys': analyze_info['world_coord_sys']})
 
             # 下载成果（任务所有帧渲染完成才开始下载）
-            download.auto_download_after_task_completed([int(task_id)], download_filename_format="false",
+            download.auto_download_cc_after_task_completed([int(task_id)], download_filename_format="false",
                                                         local_path=r"G:\sdk_result", download_type='render')
 
 
@@ -193,7 +193,7 @@
  ::
 
     from dayan_api.core import RayvisionAPI
-    from analyze_contextcapture import AnalyzeContextCapture
+    from dayan_contextcapture.analyze_contextcapture import AnalyzeContextCapture
     from rayvision_sync.upload import RayvisionUpload
     from rayvision_sync.download import RayvisionDownload
     from dayan_api.task.check import RayvisionCheck
@@ -294,6 +294,6 @@
     # Step7:Download
     download = RayvisionDownload(api)
 
-    download.auto_download_after_task_completed([int(task_id)], download_filename_format="false",
+    download.auto_download_cc_after_task_completed([int(task_id)], download_filename_format="false",
                                             local_path=r"G:\sdk_result\rebuild", download_type='render')
 
