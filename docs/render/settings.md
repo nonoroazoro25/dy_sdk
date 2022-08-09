@@ -4,30 +4,8 @@
 
 > 设定了日志保存的名称和gitlab 进行自动化部署(CD)打包的包名，如
 >
-> ​      PACKAGE_NAME = "rayvision_clarisse"
+> ​      PACKAGE_NAME = "dayan_contextcapture"
 
-### DCC软件的ID映射
-
-```python
-DCC_ID_MAPPINGS = {
-        'maya': 2000,
-        '3ds Max': 2001,
-        'lightwave': 2002,
-        'arnold': 2003,
-        'houdini': 2004,
-        'cinema4d': 2005,
-        'softimage': 2006,
-        'blender': 2007,
-        'vr_standalone': 2008,
-        'mr_standalone': 2009,
-        'sketchup': 2010,
-        'vue': 2011,
-        'keyshot': 2012,
-        'clarisse': 2013,
-        'octane_render': 2014,
-        'katana': 2016,
-    }
-```
 
 ### 请求头(HEADERS)
 

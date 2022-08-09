@@ -72,12 +72,13 @@ upload_obj.upload("5165465", **CONFIG_PATH)
 #### 1. 以任务为粒度，当任务中帧全部渲染完成开始下载(任务号必须)
 
 ```python
-    def auto_download_after_task_completed(self, task_id_list=None,
-                                  max_speed=None, print_log=True,
-                                  sleep_time=10,
-                                  download_filename_format="true",
-                                  local_path=None,
-                                  engine_type="aspera", server_ip=None, server_port=None):
+    def auto_download_cc_after_task_completed(self, task_id_list=None,
+                                           max_speed=None, print_log=True,
+                                           sleep_time=10,
+                                           download_filename_format="true",
+                                           local_path=None,
+                                           engine_type="aspera", server_ip=None, server_port=None,
+                                           network_mode=0, download_type=None):
         """Auto download after the tasks render completed.
 
         Args:
@@ -120,7 +121,7 @@ api = RayvisionAPI(access_id="xxx",
                    platform="2")
 
 download = RayvisionDownload(api)
-download.auto_download_after_task_completed([int(task_id)], download_filename_format="false",local_path=r"G:\sdk_result", download_type='render')
+download.auto_download_cc_after_task_completed([int(task_id)], download_filename_format="false",local_path=r"G:\sdk_result", download_type='render')
 ```
 
 
@@ -212,9 +213,9 @@ download.auto_download([49240085], network_mode=2)
   ```
 
 
-- auto_download_after_task_completed
+- auto_download_cc_after_task_completed
   ```
-  download.auto_download_after_task_completed([49228557], local_path=r"G:\sdk_result", download_type='render')
+  download.auto_download_cc_after_task_completed([49228557], local_path=r"G:\sdk_result", download_type='render')
   ```
 
   

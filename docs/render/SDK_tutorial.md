@@ -134,11 +134,11 @@ api.submit_cc(int(task_id))
 
 ##### 1. 任务所有帧渲染完成才开始下载
 
-`auto_download_after_task_completed(self, task_id_list=None,download_filename_format="true",local_path=None,download_type='render'):`
+`auto_download_cc_after_task_completed(self, task_id_list=None,download_filename_format="true",local_path=None,download_type='render'):`
 
 ```
 download = RayvisionDownload(api)
-download.auto_download_after_task_completed([int(task_id)], local_path=r"G:\sdk_result", download_type='render')
+download.auto_download_cc_after_task_completed([int(task_id)], local_path=r"G:\sdk_result", download_type='render')
 ```
 说明: 此方法任务ID不能为空
 
